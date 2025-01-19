@@ -22,10 +22,16 @@ int cout = 0; // won't compile if headers don't follow convention regarding name
 	Y - Is a daily special
 	N - Is not a daily special
 */
+double g_taxrate = 0.0;
+double g_dailydiscount = 0.0;
+
+namespace seneca {
+    
+}
 
 // TODO: write the prototype for the main function
 //         to accept command line arguments
-
+int main(int argc, char* argv[])
 {
 	std::cout << "Command Line:\n";
 	std::cout << "--------------------------\n";
@@ -35,6 +41,9 @@ int cout = 0; // won't compile if headers don't follow convention regarding name
 	//   3: third argument
 	//   ...
 
+	for (int i = 0; i < argc; i++) {
+		std::cout << "  " << (i + 1) << ": " << argv[i] << std::endl;
+	}
 
 	std::cout << "--------------------------\n\n";
 
